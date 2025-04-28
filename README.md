@@ -1,5 +1,5 @@
-## Intelligent Resume Parser
-## Python NLP OCR
+# Intelligent Resume Parser
+# Python NLP OCR
 
 An AI-powered pipeline to extract structured data from resumes (PDFs/images) using OCR (for scanned resumes) and Mistral LLM via Ollama for intelligent field extraction. Outputs JSON with confidence scores.
 
