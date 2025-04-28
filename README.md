@@ -1,5 +1,5 @@
-# Intelligent Resume Parser
-# Python NLP OCR
+## Intelligent Resume Parser
+## Python NLP OCR
 
 An AI-powered pipeline to extract structured data from resumes (PDFs/images) using OCR (for scanned resumes) and Mistral LLM via Ollama for intelligent field extraction. Outputs JSON with confidence scores.
 
@@ -66,17 +66,7 @@ Python 3.8+
 
 Ollama installed and running (for Mistral)
 
-Tesseract OCR:
-
-bash
-# Ubuntu
-sudo apt install tesseract-ocr
-
-# MacOS
-brew install tesseract
-
-# Windows (update path in code)
-choco install tesseract
+Tesseract OCR
 
 # Install dependencies:
 
@@ -98,6 +88,7 @@ from resume_parser import parse_resume
 result = parse_resume("resume.pdf")
 print(result)
 Output Example
+
 json
 {
   "name": "John Doe",
