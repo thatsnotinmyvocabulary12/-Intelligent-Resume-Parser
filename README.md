@@ -5,17 +5,18 @@ An AI-powered pipeline to extract structured data from resumes (PDFs/images) usi
 
 # 🚀 Key Features: 
 
-Multi-Format Support: Parses text-based PDFs, image-based PDFs, and images (JPG/PNG).
+1.Multi-Format Support: Parses text-based PDFs, image-based PDFs, and images (JPG/PNG).
 
-LLM-Powered Extraction: Uses Mistral via Ollama for context-aware parsing (names, skills, dates).
+2.LLM-Powered Extraction: Uses Mistral via Ollama for context-aware parsing (names, skills, dates).
 
-Confidence Scoring: Manual confidence metrics for transparency.
+3.Confidence Scoring: Manual confidence metrics for transparency.
 
-OCR Fallback: Auto-switches to Tesseract if text extraction fails.
+4.OCR Fallback: Auto-switches to Tesseract if text extraction fails.
 
-Structured Output: Clean JSON with normalized fields (e.g., dates).
+5.Structured Output: Clean JSON with normalized fields (e.g., dates).
 
 # 🛠️ How I Approached This Project
+
 ## 1. Problem Analysis
 Challenge: Resumes vary wildly in formatting (text vs. scanned, inconsistent layouts).
 
