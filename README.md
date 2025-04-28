@@ -1,9 +1,10 @@
-## Intelligent Resume Parser
+# Intelligent Resume Parser
 # Python NLP OCR
 
 An AI-powered pipeline to extract structured data from resumes (PDFs/images) using OCR (for scanned resumes) and Mistral LLM via Ollama for intelligent field extraction. Outputs JSON with confidence scores.
 
-🚀 Key Features
+# 🚀 Key Features: 
+
 Multi-Format Support: Parses text-based PDFs, image-based PDFs, and images (JPG/PNG).
 
 LLM-Powered Extraction: Uses Mistral via Ollama for context-aware parsing (names, skills, dates).
@@ -14,13 +15,13 @@ OCR Fallback: Auto-switches to Tesseract if text extraction fails.
 
 Structured Output: Clean JSON with normalized fields (e.g., dates).
 
-🛠️ How I Approached This Project
-1. Problem Analysis
+# 🛠️ How I Approached This Project
+## 1. Problem Analysis
 Challenge: Resumes vary wildly in formatting (text vs. scanned, inconsistent layouts).
 
 Goal: Extract structured data (name, skills, education, etc.) reliably.
 
-2. Technical Design
+## 2. Technical Design
    code:
    flowchart TD
     A[Input PDF/Image] --> B{Is PDF?}
@@ -33,7 +34,7 @@ Goal: Extract structured data (name, skills, education, etc.) reliably.
     F --> G[Mistral via Ollama]
     G --> H[JSON Output + Confidence Scores]
 
-3. Key Components
+## 3. Key Components
 Text Extraction:
 
 PyMuPDF: First attempt to extract text from PDFs.
@@ -52,14 +53,15 @@ Manual confidence scores (simple heuristics based on presence/absence).
 
 Error handling for malformed JSON.
 
-4. Challenges & Solutions
+## 4. Challenges & Solutions
 Challenge	Solution
 Scanned PDFs	Hybrid PyMuPDF + Tesseract fallback
 LLM output consistency	Rigid prompt constraints + JSON validation
 Date normalization	LLM prompt explicitly requests normalized formats
 Missing fields	null handling + confidence scores
-⚙️ Installation
-Prerequisites
+
+# ⚙️ Installation
+## Prerequisites
 Python 3.8+
 
 Ollama installed and running (for Mistral)
@@ -75,13 +77,8 @@ brew install tesseract
 
 # Windows (update path in code)
 choco install tesseract
-Setup
-Clone the repo:
 
-bash
-git clone https://github.com/your-username/intelligent-resume-parser.git
-cd intelligent-resume-parser
-Install dependencies:
+# Install dependencies:
 
 bash
 pip install pymupdf pytesseract pdf2image pillow ollama
@@ -91,7 +88,7 @@ bash
 ollama pull mistral
 ollama serve
 
-📌 Usage
+# 📌 Usage
 Command Line
 bash
 python resume_parser.py --file path/to/resume.pdf --output result.json
@@ -120,7 +117,7 @@ json
   }
 }
 
-🧩 Code Highlights
+# 🧩 Code Highlights
 1. Hybrid Text Extraction
 python
 def extract_text(file_path):
@@ -149,17 +146,18 @@ Important:
 - Only output valid JSON (no extra text).
 """
 response = ollama.chat(model="mistral", messages=[{"role": "user", "content": prompt}])
-📈 Future Improvements
+
+# 📈 Future Improvements
 Validation Layer: Cross-check email/phone formats with regex.
 
 Batch Processing: Support folder inputs for bulk parsing.
 
 Enhanced Confidence Scoring: Use LLM self-evaluation.
 
-📜 License
+# 📜 License
 MIT © Mugesh surya pradeep
 
-🤝 Contributing
+# 🤝 Contributing
 PRs welcome! Focus areas:
 
 Better OCR preprocessing (deskewing, contrast adjustment).
